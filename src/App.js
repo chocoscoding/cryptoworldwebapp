@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 
-import { Navbar, Exchanges, HomePage, CryptoDetails, Cryptocurrencies, News } from './components'
+import { Navbar, HomePage, CryptoDetails, Cryptocurrencies, News } from './components'
 import './App.css'
 import 'antd/dist/antd.css'
 
@@ -38,9 +38,6 @@ const App = () => {
                             <Route exact path='/'>
                                 <HomePage />
                             </Route>
-                            <Route exact path='/exchanges'>
-                                <Exchanges />
-                            </Route>
                             <Route exact path='/cryptocurrencies'>
                                 <Cryptocurrencies />
                             </Route>
@@ -62,7 +59,6 @@ const App = () => {
                     </Typography.Title>
                     <Space>
                         <Link to='/'>Home</Link>
-                        <Link to='/exchanges'>Exchanges</Link>
                         <Link to='/news'>News</Link>
                     </Space>
                 </div>
